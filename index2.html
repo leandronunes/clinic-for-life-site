@@ -6,26 +6,29 @@
     <title>Núcleo For Life — Gestão Inteligente da Saúde</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Inter (Clean e Moderna) -->
+    <!-- Google Fonts - Space Grotesk (interface) + Fraunces (títulos), mesmas do app -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <!-- FontAwesome para os ícones exatamente iguais aos do design -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        sans: ['Space Grotesk', 'sans-serif'],
+                        display: ['Fraunces', 'serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
                     },
                     colors: {
-                        darkBg: '#030d1a',      /* Azul escuro profundo de fundo */
-                        darkCard: '#06162a',    /* Cartões em tom levemente mais claro */
-                        brandCyan: '#06f9d3',   /* Ciano neon vibrante para destaques */
-                        brandBlue: '#007dfc',   /* Azul do gradiente */
-                        textGray: '#a0aec0'     /* Cinza para textos secundários */
+                        darkBg: '#0A1A2F',      /* Marinho — fundo escuro do app (sidebar/dark mode) */
+                        darkCard: '#10263C',    /* Cartões em tom levemente mais claro */
+                        brandCyan: '#16B8A6',   /* Verde-Água — accent oficial do app */
+                        brandBlue: '#0E3A53',   /* Azul Profundo — primary oficial do app */
+                        brandLightBlue: '#8FD7E6', /* Azul Claro — cor de gráfico do app, usada em destaques claros */
+                        textGray: '#9FB0B8'     /* Cinza-azulado para textos secundários */
                     }
                 }
             }
@@ -33,7 +36,11 @@
     </script>
     <style>
         body {
-            background-color: #030d1a;
+            background-color: #0A1A2F;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Fraunces', serif;
+            letter-spacing: -0.02em;
         }
     </style>
 </head>
@@ -106,7 +113,7 @@
                     <span class="text-xs uppercase tracking-widest text-brandCyan font-semibold">GESTÃO INTELIGENTE DA SAÚDE</span>
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
                         Ciência para<br> viver melhor.<br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandCyan to-brandBlue">Tecnologia para<br> evoluir sempre.</span>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandCyan to-brandLightBlue">Tecnologia para<br> evoluir sempre.</span>
                     </h1>
                     <p class="text-textGray text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
                         Na Núcleo For Life, unimos medicina, ciência do movimento e tecnologia para acompanhar sua saúde de forma contínua e personalizada.
