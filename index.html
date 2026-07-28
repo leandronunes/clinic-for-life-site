@@ -111,8 +111,8 @@
     ]
     </script>
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS compilado -->
+    <link rel="stylesheet" href="css/styles.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -120,43 +120,6 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Space Grotesk', 'sans-serif'],
-                        display: ['Fraunces', 'serif'],
-                        displayLight: ['Playfair Display', 'serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        darkBg: '#0A1A2F',      /* Marinho — fundo escuro do app (sidebar/dark mode) */
-                        darkCard: '#10263C',    /* Cartões em tom levemente mais claro */
-                        brandCyan: '#16B8A6',   /* Verde-Água — accent oficial do app */
-                        brandBlue: '#0E3A53',   /* Azul Profundo — primary oficial do app */
-                        brandLightBlue: '#8FD7E6', /* Azul Claro — cor de gráfico do app, usada em destaques claros */
-                        textGray: '#9FB0B8'     /* Cinza-azulado para textos secundários */
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            background-color: #0A1A2F;
-        }
-        h3, h4 {
-            font-family: 'Fraunces', serif;
-            letter-spacing: -0.02em;
-        }
-        /* Frases principais — fonte serifada leve, pedido do cliente (referência: fonte_referencia.jpeg) */
-        .font-display-light {
-            font-family: 'Playfair Display', serif;
-            font-weight: 400;
-            letter-spacing: 0;
-        }
-    </style>
 </head>
 <body class="text-white font-sans antialiased overflow-x-hidden">
 
