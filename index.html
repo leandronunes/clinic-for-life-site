@@ -745,6 +745,9 @@
                 <div class="text-xs text-center md:text-right space-y-2">
                     <p>&copy; 2026 Núcleo For Life. Todos os direitos reservados.</p>
                     <p class="text-white/30">Wall Street Empresarial, torre B, salas 718, 719, 720, Salvador - Bahia</p>
+                    <p>
+                        <a href="/politica-de-privacidade.html" class="hover:text-brandCyan transition-colors underline underline-offset-2">Política de Privacidade</a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -758,6 +761,26 @@
         <i class="fa-brands fa-whatsapp text-xl"></i>
         <span class="hidden sm:inline">Agendar avaliação</span>
     </a>
+
+    <!-- Banner de Cookies / LGPD -->
+    <div id="lgpd-banner" class="fixed bottom-0 left-0 right-0 z-40 bg-darkCard border-t border-white/10 shadow-2xl px-4 py-4 hidden">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <div class="flex-1 text-xs text-textGray leading-relaxed">
+                <span class="text-white font-semibold">Privacidade e Cookies</span> —
+                Utilizamos cookies essenciais para o funcionamento do site. Ao continuar navegando, você concorda com nossa
+                <a href="/politica-de-privacidade.html" class="text-brandCyan underline underline-offset-2 hover:text-white transition-colors">Política de Privacidade</a>
+                em conformidade com a <strong class="text-white">LGPD (Lei 13.709/2018)</strong>.
+            </div>
+            <div class="flex gap-2 shrink-0">
+                <a href="/politica-de-privacidade.html" class="text-xs text-textGray hover:text-white border border-white/10 px-4 py-2 rounded-full transition-colors">
+                    Saiba mais
+                </a>
+                <button id="lgpd-accept" class="text-xs bg-brandCyan hover:bg-brandCyan/90 text-darkBg font-bold px-5 py-2 rounded-full transition-all">
+                    Entendi e aceito
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- MOBILE MENU SCRIPT -->
     <script>
@@ -773,6 +796,19 @@
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
+        });
+
+        // Banner LGPD
+        const lgpdBanner = document.getElementById('lgpd-banner');
+        const lgpdAccept = document.getElementById('lgpd-accept');
+
+        if (!localStorage.getItem('lgpd-accepted')) {
+            lgpdBanner.classList.remove('hidden');
+        }
+
+        lgpdAccept.addEventListener('click', () => {
+            localStorage.setItem('lgpd-accepted', '1');
+            lgpdBanner.classList.add('hidden');
         });
     </script>
 </body>
