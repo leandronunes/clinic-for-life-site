@@ -169,8 +169,8 @@
 
                 <!-- Menu Mobile Button -->
                 <div class="lg:hidden">
-                    <button id="menu-btn" class="text-white hover:text-brandCyan focus:outline-none p-2">
-                        <i class="fa-solid fa-bars text-2xl"></i>
+                    <button id="menu-btn" class="text-white hover:text-brandCyan focus:outline-none p-2" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-menu">
+                        <i class="fa-solid fa-bars text-2xl" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
@@ -808,7 +808,9 @@
         const mobileMenu = document.getElementById('mobile-menu');
 
         menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            const isOpen = mobileMenu.classList.toggle('hidden') === false;
+            menuBtn.setAttribute('aria-expanded', isOpen);
+            menuBtn.setAttribute('aria-label', isOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
         });
         
         const mobileLinks = mobileMenu.querySelectorAll('a');
